@@ -1,0 +1,91 @@
+/*Se inicializan los estilos del navegador*/
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+/* Estilo del header */
+header{
+    width: 100%;
+    background: #4E94AB;
+}
+
+main{
+    padding: 20px;
+}
+
+/* Inicia Menu */
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+
+}
+
+header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.menu ul{
+    margin: 0px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Ocupar todo el espacio equitativamente
+.menu li {
+    text-align: center;
+    flex-grow: 1;
+}*/
+
+.menu li {
+    border-right: 1px solid #fff;
+}
+
+.menu li:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Termina menu*/
+
+/* Meqia Querys */
+@media (max-width:768px){
+    header label {
+        display: block;
+
+    }
+    .menu{
+        position: absolute;
+        background: #4E94AB;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+}
